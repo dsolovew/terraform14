@@ -34,6 +34,7 @@ resource "aws_instance" "server1" {
     "Name"  = "Server1"
     "Owner" = "Denis Solovyev"
   }
+  depends_on = [ aws_instance.server3 ]
 }
 
 resource "aws_instance" "server2" {
@@ -45,6 +46,7 @@ resource "aws_instance" "server2" {
     "Name"  = "Server2"
     "Owner" = "Denis Solovyev"
   }
+  depends_on = [ aws_instance.server3 ]
 }
 
 resource "aws_instance" "server3" {
